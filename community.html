@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forum dan Obrolan - Ganexio.id</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Forum diskusi dan obrolan warga desa">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container" id="main">
+  <div id="pagehead"></div>
+  <div class="row between" style="margin-bottom:1rem"><div class="tabs" style="margin:0"><button class="tab on" data-tab="forum" type="button"><i data-ic="book"></i>Forum</button><button class="tab" data-tab="chat" type="button"><i data-ic="chat"></i>Obrolan</button></div>
+    <button class="btn btn-ghost btn-sm" id="nameBtn" type="button"><i data-ic="user"></i><span id="nm">Atur nama</span></button></div>
+  <section id="forum" class="cols">
+    <form class="card" id="ff"><h2>Tulis di forum</h2><div class="msg-err" role="alert"></div>
+      <div class="field"><label for="fc">Kelompok</label><select id="fc" name="category"></select></div>
+      <div class="field"><label for="ft">Judul</label><input id="ft" name="title" maxlength="120" required></div>
+      <div class="field"><label for="fb">Isi tulisan</label><textarea id="fb" name="body" maxlength="1500" required></textarea></div>
+      <button class="btn btn-primary btn-block" type="submit"><i data-ic="send"></i>Kirim Tulisan</button></form>
+    <div><div class="toolbar"><input id="q" placeholder="Cari tulisan" aria-label="Cari"><select id="fcat" aria-label="Kelompok"></select><select id="fso" aria-label="Urutkan"><option value="new">Terbaru</option><option value="pop">Terpopuler</option></select></div><div class="stack" id="posts"></div></div>
+  </section>
+  <section id="chat" hidden class="card"><div class="chat-wrap"><div class="rooms" id="rooms"></div><div><div class="chat-box" id="box" aria-live="polite"></div>
+    <form id="cf" class="row" style="margin-top:.8rem;flex-wrap:nowrap"><input id="ct" maxlength="500" placeholder="Tulis pesan lalu tekan Enter" autocomplete="off" aria-label="Pesan"><button class="btn btn-primary" type="submit"><i data-ic="send"></i>Kirim</button></form></div></div></section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/diagram.js"></script>
+<script src="js/community.js"></script>
+</body>
+</html>

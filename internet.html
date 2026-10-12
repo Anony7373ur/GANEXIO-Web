@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Internet Starlink - Ganexio.id</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Akses situs di luar desa lewat Starlink">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container" id="main">
+  <div id="pagehead"></div>
+  <div class="card net-card" id="netCard" style="margin-bottom:1.2rem"><div class="sig"><i data-ic="wifi"></i></div><div style="flex:1;min-width:220px"><h2 style="margin:0" id="netTitle">Memeriksa sambungan...</h2><p class="muted" id="netText">Mohon tunggu sebentar.</p></div><button class="btn btn-primary" id="recheck" type="button"><i data-ic="refresh"></i>Periksa Lagi</button></div>
+  <div class="kpi" id="kpi"></div>
+  <form class="card row" id="go" style="margin-bottom:1.4rem;flex-wrap:nowrap"><input id="url" placeholder="Ketik alamat situs, contoh: wikipedia.org" aria-label="Alamat situs" inputmode="url" autocapitalize="none"><button class="btn btn-primary" type="submit"><i data-ic="external"></i>Buka</button></form>
+  <h2>Situs yang sering dibuka</h2><div id="links"></div>
+  <section class="sec-title"><h2>Cara kerja Starlink di desa</h2></section><div class="card diagram" id="diagram"></div>
+  <div class="split" style="margin-top:1.2rem"><div class="card"><h3>Tips hemat jaringan</h3><ul style="padding-left:1.1rem;margin-top:.5rem" class="stack muted"><li>Tonton video dengan kualitas rendah saat banyak warga online.</li><li>Unduh file besar pada pagi atau malam hari.</li><li>Dekati titik WiFi dusun untuk sinyal lebih kuat.</li></ul></div>
+  <div class="card"><h3>Jika internet terputus</h3><p class="muted" style="margin-top:.5rem">Cuaca ekstrem atau antena tertutup dapat mengganggu Starlink. Layanan desa seperti pasar, forum, dan obrolan tetap bisa dipakai. Laporkan gangguan lewat halaman Pesan dan Permohonan.</p></div></div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/diagram.js"></script>
+<script src="js/internet.js"></script>
+</body>
+</html>

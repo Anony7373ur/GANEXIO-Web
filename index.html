@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beranda - Ganexio.id</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Ganexio.id - portal digital untuk desa terpencil: pasokan dari kota, pasar desa, CCTV, forum, dan internet Starlink">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container" id="main">
+  <section class="hero">
+    <div>
+      <h1>Desa terpencil, tetap terhubung.</h1>
+      <p id="about"></p>
+      <div class="row">
+        <a class="btn btn-primary pulse" href="#kategori" style="--c1:#ff6a4d;--c2:#e8590c"><i data-ic="send"></i>Mulai Jelajahi</a>
+        <a class="btn btn-light" href="cctv.html"><i data-ic="camera"></i>Lihat CCTV Desa</a>
+      </div>
+    </div>
+    <div class="hero-logo"><span class="ring"></span><span class="ring"></span><span class="ring"></span><img src="img/logo.png" alt="Logo Ganexio"></div>
+  </section>
+  <div class="stats" id="stats"></div>
+
+  <section class="sec-title"><h2>Masalah yang kami selesaikan</h2><p>Desa terpencil sulit berkembang bukan karena warganya kurang mampu, tetapi karena akses.</p></section>
+  <div class="split">
+    <article class="card problem"><h3>Tantangan desa</h3><ul class="stack" style="margin-top:.7rem;padding-left:1.1rem">
+      <li>Sinyal dan komunikasi terputus antardesa dan dengan kota.</li>
+      <li>Barang kebutuhan sulit dan mahal masuk ke desa (logistik).</li>
+      <li>Hasil bumi warga sulit dipasarkan dan keuangan desa kurang transparan.</li>
+      <li>Layanan pemerintahan dan informasi berjalan lambat.</li></ul></article>
+    <article class="card solution"><h3>Jawaban Ganexio</h3><ul class="stack" style="margin-top:.7rem;padding-left:1.1rem">
+      <li>Starlink dan WiFi desa menjangkau seluruh dusun.</li>
+      <li>Permintaan pasokan dari kota dilacak dari desa sampai tiba.</li>
+      <li>Pasar desa dan dana desa digital yang rapi dan terbuka.</li>
+      <li>Forum, obrolan, CCTV, dan formulir layanan dalam satu portal.</li></ul></article>
+  </div>
+
+  <section class="sec-title" id="kategori"><h2>Pilih layanan</h2><p>Sembilan layanan utama Ganexio. Tekan salah satu untuk mulai.</p></section>
+  <div class="tiles" id="tiles"></div>
+
+  <section class="sec-title"><h2>Bagaimana desa tersambung</h2><p>Satelit Starlink membawa internet ke antena desa, lalu dibagikan lewat WiFi ke setiap dusun.</p></section>
+  <div class="card diagram" id="diagram"></div>
+
+  <section class="sec-title"><h2>Cara memakai</h2></section>
+  <div class="steps3">
+    <div class="card"><h3>Pilih layanan</h3><p class="muted">Tekan salah satu kotak berwarna, atau buka tombol Menu di kanan atas.</p></div>
+    <div class="card"><h3>Isi atau baca</h3><p class="muted">Ikuti petunjuk di bagian atas tiap halaman. Tombol dan tulisan dibuat besar.</p></div>
+    <div class="card"><h3>Simpan kode tiket</h3><p class="muted">Setiap permintaan, pesanan, atau pesan mendapat kode untuk dilacak.</p></div>
+  </div>
+
+  <section class="sec-title"><h2>Tim pengembang</h2><p>Tiga pengembang di balik Ganexio.</p></section>
+  <!-- TODO-ISI: nama, peran, profil, dan foto tim diatur di js/config.js bagian "team" -->
+  <div class="grid team" id="team"></div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/diagram.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

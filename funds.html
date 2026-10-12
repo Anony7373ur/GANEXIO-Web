@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dana Desa Bersama - Ganexio.id</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Catatan kas digital desa, khusus administrator keuangan">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container" id="main">
+  <div id="pagehead"></div>
+  <div class="card pin-box" id="locked" hidden>
+    <span data-cat="funds" data-size="lg"></span>
+    <h2 style="margin-top:1rem">Khusus administrator keuangan</h2>
+    <p class="muted" style="margin-bottom:1rem">Dana desa hanya dapat dibuka oleh bendahara. Masukkan PIN untuk melanjutkan.</p>
+    <button class="btn btn-primary" id="openPin" type="button"><i data-ic="key"></i>Masukkan PIN Bendahara</button>
+  </div>
+  <div id="area" hidden>
+    <div class="kpi" id="kpi"></div>
+    <div class="split" style="margin-bottom:1.3rem">
+      <section class="card"><h2>Pemasukan dan pengeluaran 6 bulan</h2><div id="chart"></div><div class="row muted"><span><b style="color:var(--green)">&#9632;</b> Masuk</span><span><b style="color:var(--red)">&#9632;</b> Keluar</span></div></section>
+      <section class="card"><h2>Pengeluaran per kelompok</h2><div class="stack" id="byCat"></div></section>
+    </div>
+    <div class="cols">
+      <form class="card" id="f">
+        <h2>Catat transaksi</h2><div class="msg-err" role="alert"></div>
+        <div class="choices inline"><label class="choice"><input type="radio" name="type" value="masuk" checked><span><i data-ic="up"></i>Uang masuk</span></label><label class="choice"><input type="radio" name="type" value="keluar"><span><i data-ic="down"></i>Uang keluar</span></label></div>
+        <div class="field"><label for="amt">Jumlah (Rupiah)</label><input id="amt" name="amount" type="number" min="1" inputmode="numeric" required></div>
+        <div class="two"><div class="field"><label for="cat">Kelompok</label><select id="cat" name="category"></select></div><div class="field"><label for="dt">Tanggal</label><input id="dt" name="date" type="date" required></div></div>
+        <div class="field"><label for="desc">Keterangan</label><input id="desc" name="description" maxlength="120" placeholder="Contoh: Beli semen untuk jalan dusun" required></div>
+        <button class="btn btn-primary btn-block" type="submit"><i data-ic="check"></i>Simpan Catatan</button>
+      </form>
+      <section class="card"><div class="row between"><h2 style="margin:0">Riwayat kas</h2><div class="row no-print"><button class="btn btn-ghost btn-sm" id="csvBtn" type="button"><i data-ic="download"></i>CSV</button><button class="btn btn-ghost btn-sm" id="prBtn" type="button"><i data-ic="print"></i>Cetak</button></div></div>
+        <div class="toolbar no-print" style="margin:.8rem 0"><input id="q" placeholder="Cari keterangan" aria-label="Cari"><select id="ft" aria-label="Filter jenis"><option value="">Semua</option><option value="masuk">Masuk</option><option value="keluar">Keluar</option></select></div>
+        <div class="table-wrap" id="list"></div></section>
+    </div>
+  </div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/diagram.js"></script>
+<script src="js/funds.js"></script>
+</body>
+</html>

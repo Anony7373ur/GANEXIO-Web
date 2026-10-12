@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pasar Desa - Ganexio.id</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Pasar lokal desa: antar motor atau ambil di toko">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container" id="main">
+  <div id="pagehead"></div>
+  <div class="row between" style="margin-bottom:1rem"><div class="tabs" style="margin:0"><button class="tab on" data-tab="shop" type="button"><i data-ic="store"></i>Barang Dijual</button><button class="tab" data-tab="orders" type="button"><i data-ic="truck"></i>Pesanan</button></div>
+    <button class="btn btn-primary" id="sellBtn" type="button"><i data-ic="plus"></i>Jual Barang</button></div>
+  <section id="shop">
+    <div class="toolbar"><input id="q" placeholder="Cari barang atau nama penjual" aria-label="Cari barang"><select id="sort" aria-label="Urutkan"><option value="new">Terbaru</option><option value="low">Termurah</option><option value="high">Termahal</option></select><select id="dl" aria-label="Cara terima"><option value="">Semua cara terima</option><option value="motor">Bisa diantar motor</option><option value="ambil">Bisa ambil di toko</option></select></div>
+    <div class="chips" id="cats" style="margin-bottom:1.2rem"></div>
+    <div class="grid" id="products"></div>
+  </section>
+  <section id="orders" hidden></section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/diagram.js"></script>
+<script src="js/market.js"></script>
+</body>
+</html>
