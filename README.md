@@ -1,4 +1,6 @@
-# Ganexio.id (versi lomba)
+# Ganexio - Desa Sipagabu (versi lomba)
+
+> Status revisi bertahap: **selesai** = umum + welcome, pasokan dari kota. **Berikutnya**: dana desa, pasar desa, CCTV, forum, akses internet, informasi desa, pesan permohonan, kontak. Berkas `js/funds.js`, `market.js`, `cctv.js`, `community.js`, `internet.js`, `info.js`, `messages.js` masih versi lama dan akan disesuaikan pada tahap berikutnya.
 
 Website statis untuk desa terpencil: HTML, CSS, dan JavaScript murni. Tanpa server, tanpa login, tanpa instalasi.
 Data (permintaan, pesanan, forum, obrolan, dana desa, tiket) tersimpan di peramban lewat `js/store.js`, jadi semua fitur berfungsi saat dinilai.
