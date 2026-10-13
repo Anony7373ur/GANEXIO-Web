@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pesan dan Permohonan - Ganexio - Desa Sipagabu</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Pesan, permohonan surat, dan laporan ke perangkat desa">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container" id="main">
+  <div id="pagehead"></div>
+  <div class="tabs"><button class="tab on" data-tab="form" type="button"><i data-ic="mail"></i>Kirim Layanan</button><button class="tab" data-tab="track" type="button"><i data-ic="search"></i>Lacak Tiket</button><button class="tab" data-tab="inbox" type="button" id="inboxTab" hidden><i data-ic="shield"></i>Kotak Masuk Petugas</button></div>
+  <section id="form" class="cols">
+    <form class="card" id="f"><h2>Formulir layanan</h2><div class="msg-err" role="alert"></div>
+      <label class="lbl">Jenis layanan</label>
+      <div class="choices" id="types">
+        <label class="choice"><input type="radio" name="type" value="pesan" checked><span><i data-ic="mail"></i><b>Pesan<small>Pertanyaan atau saran</small></b></span></label>
+        <label class="choice"><input type="radio" name="type" value="surat"><span><i data-ic="file"></i><b>Permohonan Surat<small>Domisili, usaha, keterangan lain</small></b></span></label>
+        <label class="choice"><input type="radio" name="type" value="laporan"><span><i data-ic="flag"></i><b>Laporan / Pengaduan<small>Wajib jujur. Petugas akan mendatangi pihak terkait</small></b></span></label>
+      </div>
+      <div class="field" id="targetF"><label for="target">Ditujukan kepada</label><select id="target" name="target"><option value="admin">Admin / Perangkat Desa</option><option value="developer">Tim Developer (website dan jaringan)</option></select></div>
+      <div class="field" id="kindF" hidden><label for="kind" id="kindL">Jenis</label><select id="kind" name="kind"></select></div>
+      <div id="repF" hidden>
+        <div class="two"><div class="field"><label for="ham">Dusun lokasi kejadian</label><select id="ham" name="dusun"></select></div><div class="field"><label for="tgl">Tanggal kejadian</label><input id="tgl" name="tanggal" type="date"></div></div>
+        <div class="field"><label for="pihak">Pihak / lokasi terkait (yang akan didatangi petugas)</label><input id="pihak" name="pihak" maxlength="120" placeholder="Nama pihak, tempat, atau alamat"></div>
+        <label class="row" style="flex-wrap:nowrap;align-items:flex-start;background:#fff4e0;border:1px solid #f0c987;border-radius:14px;padding:.8rem 1rem;margin-bottom:1rem;cursor:pointer"><input type="checkbox" id="jujur" name="jujur" style="width:26px;min-height:26px;margin-top:.15rem"><span><b>Pernyataan jujur (wajib)</b><br><span class="muted">Saya menyatakan laporan ini benar sesuai yang saya lihat atau alami. Laporan palsu dapat dikenai tindakan sesuai aturan desa.</span></span></label>
+        <p class="muted" style="margin-bottom:1rem">Setelah laporan diverifikasi, petugas desa langsung mendatangi pihak atau lokasi terkait.</p></div>
+      <div class="two"><div class="field"><label for="nm">Nama</label><input id="nm" name="name" required maxlength="60"></div><div class="field"><label for="ph">Nomor HP / WhatsApp</label><input id="ph" name="phone" inputmode="tel"></div></div>
+      <div class="field"><label for="sj">Judul</label><input id="sj" name="subject" maxlength="120" required></div>
+      <div class="field"><label for="bd">Isi</label><textarea id="bd" name="body" maxlength="2000" required></textarea></div>
+      <div class="field"><label for="fl">Foto pendukung (opsional)</label><input id="fl" type="file" accept="image/*"><img id="flp" class="up-preview" alt="" hidden></div>
+      <button class="btn btn-primary btn-block" type="submit"><i data-ic="send"></i>Kirim</button></form>
+    <aside class="stack"><div class="card"><h2>Tiket terakhir di perangkat ini</h2><div class="stack" id="mine"></div></div></aside>
+  </section>
+  <section id="track" hidden class="stack"><form class="card row" id="tf" style="flex-wrap:nowrap"><input id="tc" placeholder="Masukkan kode tiket, contoh: TKT-2610-0001" aria-label="Kode tiket"><button class="btn btn-primary" type="submit"><i data-ic="search"></i>Cari</button></form><div id="tres"></div></section>
+  <section id="inbox" hidden class="stack"></section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/messages.js"></script>
+</body>
+</html>
