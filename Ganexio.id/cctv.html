@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CCTV Desa - Ganexio - Desa Sipagabu</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Pemantauan area umum desa dengan pencatatan akses">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container" id="main">
+  <div id="pagehead"></div>
+  <div class="warn-box" style="margin-bottom:1.2rem"><b>Hanya area publik.</b> Kamera dipasang di kantor desa, jalan umum, dan ruang terbuka. Dilarang di halaman rumah atau area pribadi. Semua akses dan pengambilan gambar tercatat dan dapat dilihat warga.</div>
+  <div id="gate" class="card" hidden></div>
+  <div id="main2" hidden>
+    <div class="row between" style="margin-bottom:1rem"><div class="tabs" style="margin:0" id="ctabs"><button class="tab on" data-t="live" type="button"><i data-ic="camera"></i>Siaran</button><button class="tab" data-t="rec" type="button"><i data-ic="play"></i>Rekaman lama</button><button class="tab" data-t="log" type="button"><i data-ic="list"></i>Log akses</button><button class="tab" data-t="snap" type="button"><i data-ic="image"></i>Log gambar</button></div><span class="badge b-ok" id="onl"></span></div>
+    <div id="c-live"><div class="tabs" id="layout"><button class="tab" data-l="l1" type="button">1 kamera</button><button class="tab on" data-l="l4" type="button">Semua kamera</button></div><div class="cams l4" id="cams"></div></div>
+    <div id="c-rec" hidden></div><div id="c-log" hidden></div><div id="c-snap" hidden></div>
+  </div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cctv.js"></script>
+</body>
+</html>
