@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Developer Mode - Ganexio - Desa Sipagabu</title>
+<meta name="robots" content="noindex">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{if(sessionStorage.getItem('gx_nav'))document.documentElement.classList.add('navin')}catch(e){}</script>
+</head>
+<body>
+<main class="container" id="main">
+  <div class="page-head"><span class="cat-ic lg" style="--c1:#14213d;--c2:#5b3fd1"><i data-ic="server"></i></span><div><h1>Developer Mode</h1><p>Alat diagnosis, informasi frontend dan backend untuk tim pengembang. Hanya terbuka dengan PIN developer.</p></div></div>
+  <div class="card pin-box" id="locked" hidden>
+    <span data-cat="funds" data-size="lg" style="display:none"></span>
+    <h2>Khusus developer</h2>
+    <p class="muted" style="margin-bottom:1rem">Masukkan PIN developer untuk membuka alat diagnosis. Tanpa PIN, halaman ini terkunci.</p>
+    <button class="btn btn-primary" id="openPin" type="button"><i data-ic="key"></i>Masukkan PIN Developer</button>
+  </div>
+  <div id="devApp" hidden>
+    <div class="tabs" id="dtabs"></div>
+    <section id="d-diag"></section><section id="d-data" hidden></section><section id="d-front" hidden></section><section id="d-back" hidden></section><section id="d-log" hidden></section>
+  </div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/app.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/pwa.js"></script>
+<script src="js/devmanifest.js"></script>
+<script src="js/dev.js"></script>
+</body>
+</html>

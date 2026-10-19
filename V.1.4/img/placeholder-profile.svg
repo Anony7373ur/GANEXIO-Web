@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Foto profil">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9edf8"/><stop offset="1" stop-color="#cfd6ec"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#g)"/>
+<g fill="none" stroke="#8a95b5" stroke-width="14" stroke-linecap="round"><circle cx="200" cy="155" r="62"/><path d="M80 345c0-70 55-105 120-105s120 35 120 105"/></g></svg>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pasokan dari Kota - Ganexio - Desa Sipagabu</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Minta pasokan dari kota dan lacak pengirimannya">
+<meta name="theme-color" content="#14213d">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{if(sessionStorage.getItem('gx_nav'))document.documentElement.classList.add('navin')}catch(e){}</script>
+</head>
+<body>
+<main class="container" id="main">
+  <div id="pagehead"></div>
+  <div class="tabs" id="tabs"><button class="tab on" data-tab="new" type="button"><i data-ic="plus"></i>Buat Permintaan</button><button class="tab" data-tab="track" type="button"><i data-ic="truck"></i>Lacak Permintaan</button></div>
+  <section id="new" class="cols">
+    <form class="card" id="f">
+      <h2>Permintaan baru</h2><div class="msg-err" role="alert"></div>
+      <label class="lbl">1. Jenis kebutuhan</label><div class="choices" id="cats"></div>
+      <div class="field" id="customF" hidden><label for="custom">Nama kategori / jenis barang kustom</label><input id="custom" name="custom" maxlength="60" placeholder="Contoh: Peralatan pengolahan kopi"><p class="warn-box" style="margin-top:.5rem">Barang kustom belum punya mitra tetap. Tim Ganexio perlu mencari pemasok, jadi prosesnya lebih lama (perkiraan 5-14 hari).</p></div>
+      <label class="lbl">2. Barang yang diminta</label>
+      <div class="chips" id="quick" style="margin-bottom:.8rem"></div><div class="stack" id="items" style="margin-bottom:.8rem"></div>
+      <button class="btn btn-ghost btn-sm" id="addItem" type="button"><i data-ic="plus"></i>Tambah barang lain</button>
+      <hr style="border:0;border-top:1px solid var(--line);margin:1.1rem 0">
+      <label class="lbl">3. Cara menerima barang</label><div class="choices" id="modes"></div>
+      <div class="field" id="destF"><label for="dest">Dusun tujuan</label><select id="dest" name="dest"></select></div>
+      <div class="two"><div class="field"><label for="pay">Pembayaran</label><select id="pay" name="payment"></select></div><div class="field"><label for="urg">Seberapa mendesak?</label><select id="urg" name="urgency"><option value="biasa">Biasa</option><option value="mendesak">Mendesak</option></select></div></div>
+      <div class="field"><label for="note">Catatan (boleh kosong)</label><textarea id="note" name="note"></textarea></div>
+      <div class="card" style="box-shadow:none;margin-bottom:1rem" id="est"></div>
+      <button class="btn btn-primary btn-block" type="submit"><i data-ic="send"></i>Kirim Permintaan</button>
+    </form>
+    <aside class="stack">
+      <div class="card"><h2>Alur pasokan</h2><div class="road"><i data-ic="truck"></i></div><div class="track-steps" id="flowSteps"></div><p class="muted" style="margin-top:.8rem">Setiap tahap berlangsung sekitar 6 detik pada percobaan di halaman ini. Saat dipakai di lapangan, status mengikuti kondisi nyata. Barang tiba, diambil, dibayar di lokasi, lalu permintaan selesai.</p></div>
+      <div class="kpi" id="kpi" style="grid-template-columns:1fr 1fr;margin:0"></div>
+      <div class="card"><h3>Mengapa tidak hanya diantar ke dusun?</h3><p class="muted" style="margin-top:.4rem">Jalan desa bisa rusak atau terputus, dan ongkos antar ke dusun jauh lebih mahal. Karena itu tersedia titik distribusi di kantor desa, gudang desa, pos transit, dan pengiriman kolektif yang lebih hemat.</p></div>
+    </aside>
+  </section>
+  <section id="track" hidden>
+    <div class="toolbar"><input id="q" placeholder="Cari kode tiket atau nama barang" aria-label="Cari"><select id="fs" aria-label="Filter status"><option value="">Semua status</option><option>menunggu</option><option>proses</option><option>dalam perjalanan</option><option>sampai</option><option>selesai</option></select></div>
+    <div class="stack" id="list"></div>
+  </section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/app.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/pwa.js"></script>
+<script src="js/supplies.js"></script>
+</body>
+</html>

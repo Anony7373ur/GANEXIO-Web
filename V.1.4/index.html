@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beranda - Ganexio - Desa Sipagabu</title>
+<!-- TODO-ISI: ubah deskripsi singkat ini untuk mesin pencari (SEO) -->
+<meta name="description" content="Ganexio - portal digital Desa Sipagabu, Kecamatan Nassau, Kabupaten Toba">
+<meta name="theme-color" content="#14213d">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>try{if(sessionStorage.getItem('gx_nav'))document.documentElement.classList.add('navin')}catch(e){}</script>
+</head>
+<body class="loading">
+<div id="loader" role="status" aria-live="polite"><div class="glitch" style="--logo:url(img/logo.png)"><img src="img/logo.png" alt="Logo Ganexio"></div><b>Ganexio - Desa Sipagabu</b><div class="ldbar"><i></i></div><p>Menyiapkan layanan desa...</p></div>
+<main class="container" id="main">
+  <section class="hero">
+    <div>
+      <h1>Desa Sipagabu, tetap terhubung.</h1>
+      <p id="about"></p>
+      <div class="row">
+        <a class="btn btn-primary pulse" href="#layanan" style="--c1:#ff6a4d;--c2:#e8590c"><i data-ic="send"></i>Mulai Jelajahi</a>
+        <a class="btn btn-light" href="#cara"><i data-ic="book"></i>Cara Memakai</a>
+      </div>
+    </div>
+    <div class="hero-logo"><span class="ring"></span><span class="ring"></span><span class="ring"></span><div class="glitch" style="--logo:url(img/logo.png)"><img src="img/logo.png" alt="Logo Ganexio"></div></div>
+  </section>
+  <div class="stats" id="stats"></div>
+
+  <section class="sec-title"><h2>Tentang Ganexio</h2></section>
+  <div class="split">
+    <article class="card"><h3>Apa itu Ganexio?</h3><p class="muted" id="about2" style="margin-top:.5rem;font-size:1rem"></p>
+      <!-- TODO-ISI: tambahkan kalimat tentang kerja sama dengan pemerintah desa jika sudah ada -->
+      <p class="muted" style="margin-top:.7rem;font-size:1rem">Dirancang sederhana, dengan tulisan besar dan petunjuk di setiap halaman, agar mudah dipakai semua warga, termasuk yang belum terbiasa dengan teknologi.</p></article>
+    <article class="card"><h3>Tujuan</h3><div class="stack" id="goals" style="margin-top:.7rem"></div></article>
+  </div>
+
+  <section class="sec-title" id="layanan"><h2>Fitur yang tersedia</h2><p>Sembilan layanan utama. Tekan salah satu untuk mulai.</p></section>
+  <div class="tiles" id="tiles"></div>
+
+  <section class="sec-title" id="cara"><h2>Cara memakai setiap fitur</h2><p>Tekan nama fitur untuk melihat langkah-langkahnya.</p></section>
+  <div class="acc" id="acc"></div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/app.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/pwa.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
